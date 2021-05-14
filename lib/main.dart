@@ -60,17 +60,19 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-@override
-Widget build(BuildContext context) {
-  return CheckboxListTile(
-    title: const Text('Animate Slowly'),
-    value: timeDilation != 1.0,
-    onChanged: (bool? value) {
-      setState(() { timeDilation = value! ? 10.0 : 1.0; });
-    },
-    secondary: const Icon(Icons.hourglass_empty),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return CheckboxListTile(
+      title: const Text('Animate Slowly'),
+      value: timeDilation != 1.0,
+      onChanged: (bool? value) {
+        setState(() {
+          timeDilation = value! ? 10.0 : 1.0;
+        });
+      },
+      secondary: const Icon(Icons.hourglass_empty),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +109,7 @@ Widget build(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'You have pushed this button this many times:',
             ),
             Text(
               '$_counter',
